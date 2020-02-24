@@ -28,9 +28,9 @@ RUN apt-get install -qy \
 
 ### Download and install pyload package
 WORKDIR /tmp
-RUN curl -sSL -O http://download.pyload.org/pyload-v0.4.9-all.deb
-RUN dpkg -i pyload-v0.4.9-all.deb
-RUN rm -f pyload-v0.4.9-all.deb
+RUN curl -sSL -O https://github.com/pyload/pyload/releases/download/0.4.20/pyload-cli_0.4.20_all.deb
+RUN dpkg -i pyload-cli_0.4.20_all.deb
+RUN rm -f pyload-cli_0.4.20_all.deb
 
 ### Clean
 RUN apt-get -qy autoremove --purge curl \
